@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.nvs.ui.DashboardController">
+
+    <top>
+        <HBox spacing="10" style="-fx-background-color: #222; -fx-padding: 10;">
+            <Label text="🔍 NVS - Network Vulnerability Scanner"
+                   style="-fx-text-fill: white; -fx-font-size: 18;" />
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="15" style="-fx-background-color: #333; -fx-padding: 15;">
+            <Button text="Scan Network" onAction="#handleScanClick" prefWidth="150"/>
+            <Button text="Scan Logs" prefWidth="150"/>
+            <Button text="Vulnerability DB" prefWidth="150"/>
+            <Button text="Report" prefWidth="150"/>
+            <Button fx:id="exportBtn" text="Export Report" onAction="#handleExportReport" />
+
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10" style="-fx-background-color: #444; -fx-padding: 10;">
+            <SplitPane orientation="HORIZONTAL" dividerPositions="0.5">
+                <TableView fx:id="scanTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="ipColumn" text="IP Address" prefWidth="150"/>
+                        <TableColumn fx:id="portCountColumn" text="Open Ports Count" prefWidth="150"/>
+                        <TableColumn fx:id="portsColumn" text="Open Ports" prefWidth="400"/>
+                    </columns>
+                </TableView>
+                <PieChart fx:id="portPieChart" title="Port Usage Distribution" />
+            </SplitPane>
+
+            <Label text="🔐 Vulnerabilities" style="-fx-text-fill: white; -fx-font-size: 16;"/>
+            <TableView fx:id="vulnTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="cveIdCol" text="CVE ID" prefWidth="120"/>
+                    <TableColumn fx:id="cvssCol" text="CVSS" prefWidth="60"/>
+                    <TableColumn fx:id="summaryCol" text="Summary" prefWidth="400"/>
+                    <TableColumn fx:id="pubDateCol" text="Published Date" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/fe49c592-80d8-45d8-9c11-190dd4bd0775)Introducing NVS - Network Vulnerability Scanner [Stage-1]
+Introducing NVS - Network Vulnerability Scanner [Stage-1]
 =========================================================
 NVS is a sophisticated Java application engineered to provide immediate insights into the security status of your active network connection. Once you click "Scan Network," it seamlessly acquires your Wi-Fi's IP address and initiates a thorough scan, designed to uncover:
 

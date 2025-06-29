@@ -20,6 +20,8 @@ Backend:
 API: 
   National Vulnerability Database (NVD) API, crucial for identifying both established and newly documented vulnerabilities.
 
+IDE:
+  IntellIJ IDEA Community Edition
 
 OUTPUT:
   ![image](https://github.com/user-attachments/assets/b4eb222e-825d-4b1f-aae3-6d35a80dbd14)

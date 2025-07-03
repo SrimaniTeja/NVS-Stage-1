@@ -24,4 +24,5 @@ IDE:
   IntellIJ IDEA Community Edition
 
 OUTPUT:
-  ![image](https://github.com/user-attachments/assets/b4eb222e-825d-4b1f-aae3-6d35a80dbd14)
+  ![image](https://github.com/user-attachments/assets/2a99c183-73ca-4b5b-96b7-1af34f1bbe26)
+
